@@ -261,6 +261,11 @@
     (uuid e00b4dd6-fc3c-4794-a098-2d9123572700)
   )
 
+  (text "Basic LED Driver" (at 132.715 74.93 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid c4d8fd62-a5f2-4f74-b981-a60cfb9f439a)
+  )
+
   (symbol (lib_id "Mechanical:MountingHole") (at 147.955 114.935 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 3b7261fd-a7a3-4a96-8ec9-eabcfb195305)
