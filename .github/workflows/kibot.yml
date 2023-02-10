@@ -1,7 +1,6 @@
 name: "Kibot"
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Controls when the action will run.
 on:
   push:
     paths:
@@ -17,56 +16,68 @@ on:
       - '*.kibot.yaml'
       - 'Makefile'
       - '.github/workflows/kibot.yml'
+  repository_dispatch:
+    types: [run_gha]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   ERC:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Run ERC
-      run: |
-        make erc
+      uses: INTI-CMNB/KiBot@v2_k6
+      with:
+        dir: Generated
+        skip: run_drc
+        targets: __NONE__
+
     - name: Retrieve results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ERC_Output
         path: Generated
 
+
   DRC:
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:latest
     needs: ERC
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Run DRC
-      run: |
-        make drc
+      uses: INTI-CMNB/KiBot@v2_k6
+      with:
+        dir: Generated
+        skip: run_erc
+        targets: __NONE__
+
     - name: Retrieve results
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: DRC_Output
         path: Generated
 
-  FabSch:
-    name: Schematic fabrication files
+
+  default:
+    name: "Default variant"
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad6_auto:latest
     needs: [ERC, DRC]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Run schematic stuff
-      run: |
-        make kicad-automation-test
-    - name: Retrieve results
-      uses: actions/upload-artifact@v1
+    - uses: INTI-CMNB/KiBot@v2_k6
       with:
-        name: All_Output
-        path: Generated
+        dir: default
+        variant: default
+        skip: all
+
+    - name: upload results
+      uses: actions/upload-artifact@v3
+      with:
+        name: default_variant
+        path: default

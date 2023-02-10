@@ -18,20 +18,8 @@ preflight:
 
 variants:
   - name: 'default'
-    comment: 'Minimal PCB no USB'
+    comment: 'default variant'
     type: kibom
-
-  - name: 'USB'
-    comment: 'Full board'
-    type: kibom
-    file_id: _USB
-    variant: USB
-
-  - name: 'XTAL'
-    comment: 'No USB, but crystal included'
-    type: kibom
-    file_id: _XTAL
-    variant: XTAL
 
 outputs:
   - name: 'bom_xlsx'
