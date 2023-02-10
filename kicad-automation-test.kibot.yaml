@@ -109,16 +109,12 @@ outputs:
     options:
       force_edge_cuts: true
       keep_temporal_files: true
-      title: "Arduino programmer KiBot demo"
+      title: "Kicad Automation Test Project"
       sheet_reference_layout: pcb_print.kicad_wks
       scaling: 2.0
       pages:
         - layers: [ F.Cu, F.SilkS, Dwgs.User ]
           sheet: 'Top layer'
-        - layers: [ GND.Cu, Dwgs.User ]
-          sheet: 'GND plane'
-        - layers: [ Power.Cu, Dwgs.User ]
-          sheet: 'Power plane'
         - layers: [ B.Cu, B.SilkS, Dwgs.User ]
           sheet: 'Bottom layer'
           mirror: true
