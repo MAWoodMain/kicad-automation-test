@@ -73,9 +73,9 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
-          "Board_0-Net-(D1-Pad1)",
+          "Board_0-Net-(J1-Pad1)",
           "Board_0-Net-(D1-Pad2)",
-          "Board_0-Net-(J1-Pad1)"
+          "Board_0-Net-(D1-Pad1)"
         ]
       },
       {
@@ -118,8 +118,8 @@
         "wire_width": 6.0,
         "nets": [
           "Board_2-Net-(J1-Pad1)",
-          "Board_2-Net-(D1-Pad2)",
-          "Board_2-Net-(D1-Pad1)"
+          "Board_2-Net-(D1-Pad1)",
+          "Board_2-Net-(D1-Pad2)"
         ]
       },
       {
@@ -139,8 +139,8 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
-          "Board_3-Net-(D1-Pad1)",
           "Board_3-Net-(D1-Pad2)",
+          "Board_3-Net-(D1-Pad1)",
           "Board_3-Net-(J1-Pad1)"
         ]
       },
@@ -161,9 +161,9 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
-          "Board_4-Net-(J1-Pad1)",
           "Board_4-Net-(D1-Pad2)",
-          "Board_4-Net-(D1-Pad1)"
+          "Board_4-Net-(D1-Pad1)",
+          "Board_4-Net-(J1-Pad1)"
         ]
       },
       {
@@ -183,9 +183,9 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
-          "Board_5-Net-(J1-Pad1)",
           "Board_5-Net-(D1-Pad2)",
-          "Board_5-Net-(D1-Pad1)"
+          "Board_5-Net-(D1-Pad1)",
+          "Board_5-Net-(J1-Pad1)"
         ]
       },
       {
@@ -206,8 +206,8 @@
         "wire_width": 6.0,
         "nets": [
           "Board_6-Net-(D1-Pad2)",
-          "Board_6-Net-(D1-Pad1)",
-          "Board_6-Net-(J1-Pad1)"
+          "Board_6-Net-(J1-Pad1)",
+          "Board_6-Net-(D1-Pad1)"
         ]
       },
       {
@@ -249,9 +249,9 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
-          "Board_8-Net-(J1-Pad1)",
           "Board_8-Net-(D1-Pad2)",
-          "Board_8-Net-(D1-Pad1)"
+          "Board_8-Net-(D1-Pad1)",
+          "Board_8-Net-(J1-Pad1)"
         ]
       },
       {
@@ -272,8 +272,8 @@
         "wire_width": 6.0,
         "nets": [
           "Board_9-Net-(J1-Pad1)",
-          "Board_9-Net-(D1-Pad2)",
-          "Board_9-Net-(D1-Pad1)"
+          "Board_9-Net-(D1-Pad1)",
+          "Board_9-Net-(D1-Pad2)"
         ]
       },
       {
@@ -293,9 +293,9 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
+          "Board_10-Net-(D1-Pad1)",
           "Board_10-Net-(D1-Pad2)",
-          "Board_10-Net-(J1-Pad1)",
-          "Board_10-Net-(D1-Pad1)"
+          "Board_10-Net-(J1-Pad1)"
         ]
       },
       {
@@ -315,9 +315,9 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
-          "Board_11-Net-(D1-Pad1)",
+          "Board_11-Net-(J1-Pad1)",
           "Board_11-Net-(D1-Pad2)",
-          "Board_11-Net-(J1-Pad1)"
+          "Board_11-Net-(D1-Pad1)"
         ]
       },
       {
@@ -337,9 +337,9 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
+          "Board_12-Net-(D1-Pad2)",
           "Board_12-Net-(D1-Pad1)",
-          "Board_12-Net-(J1-Pad1)",
-          "Board_12-Net-(D1-Pad2)"
+          "Board_12-Net-(J1-Pad1)"
         ]
       },
       {
@@ -359,8 +359,8 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
-          "Board_13-Net-(D1-Pad2)",
           "Board_13-Net-(J1-Pad1)",
+          "Board_13-Net-(D1-Pad2)",
           "Board_13-Net-(D1-Pad1)"
         ]
       },
@@ -403,9 +403,9 @@
         "via_drill": 0.4,
         "wire_width": 6.0,
         "nets": [
-          "Board_15-Net-(D1-Pad1)",
+          "Board_15-Net-(J1-Pad1)",
           "Board_15-Net-(D1-Pad2)",
-          "Board_15-Net-(J1-Pad1)"
+          "Board_15-Net-(D1-Pad1)"
         ]
       }
     ],
