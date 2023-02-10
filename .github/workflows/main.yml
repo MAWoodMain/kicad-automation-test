@@ -4,8 +4,17 @@ name: "Build and deploy documentation"
 # events but only for the master branch
 on:
   push:
-    branches:
-      - master
+    paths:
+      - '*.kicad_sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - '.github/workflows/main.yml'
+  pull_request:
+    paths:
+      - '*.kicad_sch'
+      - '*.kicad_pcb'
+      - '*.kibot.yaml'
+      - '.github/workflows/main.yml'
   repository_dispatch:
     types: [run_qs]
 
