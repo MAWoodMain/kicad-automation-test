@@ -190,13 +190,13 @@ DEVICE "DEV_TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.5
 PART "Input"
 PACKAGE "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 
-DEVICE "DEV_Resistor_SMD:R_0805_2012Metric"
-PART "120R"
-PACKAGE "Resistor_SMD:R_0805_2012Metric"
-
 DEVICE "DEV_LED_SMD:LED_0805_2012Metric"
 PART "RED"
 PACKAGE "LED_SMD:LED_0805_2012Metric"
+
+DEVICE "DEV_Resistor_SMD:R_0805_2012Metric"
+PART "120R"
+PACKAGE "Resistor_SMD:R_0805_2012Metric"
 
 DEVICE "DEV_MountingHole:MountingHole_2.2mm_M2"
 PART "M2"

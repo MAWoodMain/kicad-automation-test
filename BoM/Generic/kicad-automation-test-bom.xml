@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<KiCad_BOM PCB_Variant="default" KiCad_Version="6.0.10+dfsg-1~bpo11+1" Component_Groups="3" Component_Count="3 (2 SMD/ 1 THT)" Fitted_Components="3 (2 SMD/ 1 THT)" Number_of_PCBs="1" Total_Components="3" Schematic_Source="kicad-automation-test" Schematic_Revision="" Schematic_Date="2023-02-10_23-25-35" encoding="utf-8">
+<KiCad_BOM PCB_Variant="default" KiCad_Version="6.0.10+dfsg-1~bpo11+1" Component_Groups="3" Component_Count="3 (2 SMD/ 1 THT)" Fitted_Components="3 (2 SMD/ 1 THT)" Number_of_PCBs="1" Total_Components="3" Schematic_Source="kicad-automation-test" Schematic_Revision="" Schematic_Date="2023-02-10_23-45-28" encoding="utf-8">
 	<group Row="1" Description="Light emitting diode" Part="LED" References="D1" Value="RED" Footprint="LED_0805_2012Metric" Quantity_Per_PCB="1" Status=" " Datasheet="~"/>
 	<group Row="2" Description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)" Part="Screw_Terminal_01x02" References="J1" Value="Input" Footprint="TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" Quantity_Per_PCB="1" Status=" " Datasheet="~"/>
 	<group Row="3" Description="Resistor" Part="R" References="R1" Value="120R" Footprint="R_0805_2012Metric" Quantity_Per_PCB="1" Status=" " Datasheet="~"/>
