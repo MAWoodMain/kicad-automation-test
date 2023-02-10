@@ -1,0 +1,9 @@
+### Module positions - created on Fri 10 Feb 2023 23:28:34  ###
+### Printed by KiBot
+## Unit = mm, Angle = deg.
+## Side : both
+# Ref   Val     Package                                                        PosX       PosY       Rot        Side
+D1      RED     LED_0805_2012Metric                                            142.0000   -91.8500   90.0000    top 
+J1      Input   TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal   136.0000   -88.2500   -90.0000   top 
+R1      120R    R_0805_2012Metric                                              142.0000   -88.0000   -90.0000   top 
+## End

@@ -1,0 +1,21 @@
+Row	Description	Part	References	Value	Footprint	Quantity Per PCB	Status	Datasheet
+1	Light emitting diode	LED	D1	RED	LED_0805_2012Metric	1	 	~
+2	Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)	Screw_Terminal_01x02	J1	Input	TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal	1	 	~
+3	Resistor	R	R1	120R	R_0805_2012Metric	1	 	~
+
+
+
+
+
+Project info:
+Schematic:	kicad-automation-test
+Variant:	default
+Revision:	
+Date:	2023-02-10_23-25-35
+KiCad Version:	6.0.10+dfsg-1~bpo11+1
+Statistics:
+Component Groups:	3
+Component Count:	3 (2 SMD/ 1 THT)
+Fitted Components:	3 (2 SMD/ 1 THT)
+Number of PCBs:	1
+Total Components:	3
