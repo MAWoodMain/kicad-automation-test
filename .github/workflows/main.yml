@@ -1,4 +1,4 @@
-name: "Variants demo using --quick-start"
+name: "Build and deploy documentation"
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -7,12 +7,12 @@ on:
     paths:
       - '*.kicad_sch'
       - '*.kicad_pcb'
-      - '.github/workflows/kibot_quick_start.yml'
+      - '.github/workflows/main.yml'
   pull_request:
     paths:
       - '*.kicad_sch'
       - '*.kicad_pcb'
-      - '.github/workflows/kibot_quick_start.yml'
+      - '.github/workflows/main.yml'
   repository_dispatch:
     types: [run_qs]
 
@@ -56,5 +56,3 @@ jobs:
       with:
         branch: main
         folder: Generated
-        repository-name: INTI-CMNB/kibot_variants_arduprog_site
-        token: ${{ secrets.TOKEN }}
