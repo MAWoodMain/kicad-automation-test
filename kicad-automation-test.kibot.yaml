@@ -1,7 +1,8 @@
 # Example KiBot config file for ardu_prog.pro
 kibot:
   version: 1
-
+global:
+    units: 'millimeters'
 preflight:
   check_zone_fills: true
   run_erc: true
@@ -167,7 +168,7 @@ outputs:
     type: render_3d
     dir: 3D
     options:
-      zoom: 4
+      zoom: 2
       rotate_x: 3
       rotate_z: 3
       ray_tracing: true
