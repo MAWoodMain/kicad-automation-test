@@ -172,3 +172,8 @@ outputs:
       rotate_x: 3
       rotate_z: 3
       ray_tracing: true
+
+  - name: web_pages
+    comment: "Generate web pages"
+    type: navigate_results
+    dir: './'
