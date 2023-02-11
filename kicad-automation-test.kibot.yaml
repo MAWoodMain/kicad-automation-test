@@ -65,6 +65,108 @@ outputs:
     options:
       layer_view: F
 
+  - name: _JLCPCB_gerbers
+    comment: Gerbers compatible with JLCPCB
+    type: gerber
+    dir: JLCPCB
+    options: &gerber_options
+      exclude_edge_layer: true
+      exclude_pads_from_silkscreen: true
+      plot_sheet_reference: false
+      plot_footprint_refs: true
+      plot_footprint_values: false
+      force_plot_invisible_refs_vals: false
+      tent_vias: true
+      use_protel_extensions: true
+      create_gerber_job_file: false
+      disable_aperture_macros: true
+      gerber_precision: 4.6
+      use_gerber_x2_attributes: false
+      use_gerber_net_attributes: false
+      line_width: 0.1
+      subtract_mask_from_silk: true
+      inner_extension_pattern: '.g%n'
+    layers:
+      - copper
+      - F.SilkS
+      - B.SilkS
+      - F.Mask
+      - B.Mask
+      - Edge.Cuts
+
+  - name: _JLCPCB_drill
+    comment: Drill files compatible with JLCPCB
+    type: excellon
+    dir: JLCPCB
+    options:
+      pth_and_npth_single_file: false
+      pth_id: '-PTH'
+      npth_id: '-NPTH'
+      metric_units: true
+      map: gerber
+      route_mode_for_oval_holes: false
+      output: "%f%i.%x"
+
+  - name: _JLCPCB_position
+    comment: "Pick and place file, JLCPCB style"
+    type: position
+    dir: JLCPCB
+    options:
+      pre_transform: _rot_footprint
+      output: '%f_cpl_jlc.%x'
+      format: CSV
+      units: millimeters
+      separate_files_for_front_and_back: false
+      only_smd: true
+      columns:
+        - id: Ref
+          name: Designator
+        - Val
+        - Package
+        - id: PosX
+          name: "Mid X"
+        - id: PosY
+          name: "Mid Y"
+        - id: Rot
+          name: Rotation
+        - id: Side
+          name: Layer
+
+  - name: _JLCPCB_bom
+    comment: "BoM for JLCPCB"
+    type: bom
+    dir: JLCPCB
+    options:
+      output: '%f_%i_jlc.%x'
+      exclude_filter: '_only_jlc_parts'
+      ref_separator: ','
+      columns:
+        - field: Value
+          name: Comment
+        - field: References
+          name: Designator
+        - Footprint
+        - field: _field_lcsc_part
+          name: 'LCSC Part #'
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        quote_all: true
+
+  - name: _JLCPCB_compress
+    comment: ZIP file for JLCPCB
+    type: compress
+    dir: JLCPCB
+    options:
+      files:
+        - from_output: _JLCPCB_gerbers
+          dest: /
+        - from_output: _JLCPCB_drill
+          dest: /
+        - from_output: _JLCPCB_position
+          dest: /
+        - from_output: _JLCPCB_bom
+          dest: /
   - name: 'print_sch'
     comment: "Schematic PDF"
     type: pdf_sch_print
@@ -177,3 +279,61 @@ outputs:
     comment: "Generate web pages"
     type: navigate_results
     dir: './'
+  - name: 'panel'
+    comment: "Create a 4x4 complex panel"
+    type: panelize
+    dir: Panel
+    options:
+      title: '+ (Panel)'
+      units: mm
+      create_preview: true
+      configs:
+        - layout:
+            rows: 4
+            cols: 4
+            space: 2
+            hbackbone: 5
+            vbackbone: 5
+            hboneskip: 1
+            vboneskip: 1
+          page:
+            size: A0
+          tabs:
+            type: fixed
+            width: 3
+            vcount: 2
+            hcount: 0
+          cuts:
+            type: mousebites
+            drill: 0.5
+            spacing: 1mm
+            offset: 0.2
+            prolong: 0.5
+          framing:
+            type: railstb
+            width: 5
+            space: 3
+          copperfill:
+            type: hatched
+            clearance: 2
+            spacing: 0.5
+            width: 0.5
+          tooling:
+            type: 3hole
+            hoffset: 2.5
+            voffset: 2.5
+            size: 1.5
+          fiducials:
+            type: 3fid
+            hoffset: 5
+            voffset: 2.5
+            coppersize: 2
+            opening: 1
+          text:
+            text: "Panel for {boardTitle}"
+            anchor: mt
+            voffset: 2.5
+            hjustify: center
+            vjustify: center
+          post:
+            millradius: 1
